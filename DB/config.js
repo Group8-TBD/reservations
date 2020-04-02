@@ -1,5 +1,5 @@
 module.exports = {
-  host: 'database',
+  host: '',
   user: 'root',
   password: '',
   database: 'reservations',
