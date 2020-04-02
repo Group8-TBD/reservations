@@ -29,9 +29,10 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 ______________________________________________________
 
 **Purpose** : Retrieve property info & reservation info of a rental property
-- GET `/api/reservation/:propertyID`
-- Response (JSON object)
+- GET `/api/reservation/property/:propertyID`
+- Success Response:
   - Status: `202 OK`
+  - Content (sample):
 ```
 Property info:
 {
@@ -58,41 +59,33 @@ Reservation info:
   }
 };
 ```
+- Sample Call: `axios.get('/api/reservation/1')`
 ______________________________________________________
 
 **Purpose** : Make a reservation to a rental property
 - POST `/api/reservation/:reservationID`
-- Response (JSON object)
+- Data Params {reservationID, checkin, checkout, adults, children, infants, cost, tax, service_charge, propertyID }
+- Success Response:
   - Status: `202 OK`
-```
-{
-  id: 2,
-  checkin: 2020-01-03, 2020-03-03...........,
-  checkout: 2020-01-03, 2020-03-03...........,
-  adults: 2,
-  children: 0,
-  infants: 1,
-  cost: 789,
-  tax: 90,
-  service_charge: 130,
-  property_id: 68,
-  }
-};
-```
+  - Content: {success: 'Successfully made a reservation!'}
+- Sample Call: `axios.get('/api/reservation/1')`
 ______________________________________________________
 
 **Purpose** : Update a reservation to a rental property
 - Patch `/api/reservation/:reservationID/update`
-- Response (JSON object)
+- Data Params {reservationID, checkin, checkout, adults, children, infants, cost, tax, service_charge, propertyID}
+- Success Response:
   - Status: `202 OK`
+  - Content: {success: 'Successfully updated your reservation!'}
+- Sample Call: `axios.get('/api/reservation/1/update')`
 
 ______________________________________________________
 
 **Purpose** : Delete a reservation to a rental property
 - DELETE `/api/reservation/:reservationID/delete`
-- Response (JSON object)
+- Success Response:
   - Status: `202 OK`
-
+  - Content: {success: 'Successfully deleted your reservation!'}
 
 
 ### Installing Dependencies
