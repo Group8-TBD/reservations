@@ -22,16 +22,16 @@ app.get('/api/properties', Controller.getProperty);
 
 
 // Get reservation
-app.get('/api/properties/:propertyID', Controller.getReservation);
+app.get('/api/reservation/:propertyID', Controller.getReservation);
 
 // Post reservation
-app.post('/api/reservation/id/:reservationID', Controller.postReservation);
+app.post('/api/reservation/:reservationID/', Controller.postReservation);
 
 // Update reservation
-app.patch('/api/reservation/id/:reservationID/update', Controller.updateReservation);
+app.patch('/api/reservation/:reservationID/update', Controller.updateReservation);
 
 // Delete reservation
-app.delete('/api/reservation/id/:reservationID/delete', Controller.deleteReservation);
+app.delete('/api/reservation/:reservationID/delete', Controller.deleteReservation);
 
 
 
