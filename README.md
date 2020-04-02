@@ -64,19 +64,19 @@ ______________________________________________________
 
 **Purpose** : Make a reservation to a rental property
 - POST `/api/reservation/:reservationID`
-- Data Params {reservationID, checkin, checkout, adults, children, infants, cost, tax, service_charge, propertyID }
+- Data Params `{reservationID, checkin, checkout, adults, children, infants, cost, tax, service_charge, propertyID }`
 - Success Response:
   - Status: `202 OK`
-  - Content: {success: 'Successfully made a reservation!'}
+  - Content: `{success: 'Successfully made a reservation!'}`
 - Sample Call: `axios.get('/api/reservation/1')`
 ______________________________________________________
 
 **Purpose** : Update a reservation to a rental property
 - Patch `/api/reservation/:reservationID/update`
-- Data Params {reservationID, checkin, checkout, adults, children, infants, cost, tax, service_charge, propertyID}
+- Data Params `{reservationID, checkin, checkout, adults, children, infants, cost, tax, service_charge, propertyID}`
 - Success Response:
   - Status: `202 OK`
-  - Content: {success: 'Successfully updated your reservation!'}
+  - Content: `{success: 'Successfully updated your reservation!'}`
 - Sample Call: `axios.get('/api/reservation/1/update')`
 
 ______________________________________________________
@@ -85,7 +85,7 @@ ______________________________________________________
 - DELETE `/api/reservation/:reservationID/delete`
 - Success Response:
   - Status: `202 OK`
-  - Content: {success: 'Successfully deleted your reservation!'}
+  - Content: `{success: 'Successfully deleted your reservation!'}`
 
 
 ### Installing Dependencies
