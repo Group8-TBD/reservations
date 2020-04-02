@@ -68,7 +68,7 @@ ______________________________________________________
 - Success Response:
   - Status: `202 OK`
   - Content: `{success: 'Successfully made a reservation!'}`
-- Sample Call: `axios.get('/api/reservation/1')`
+- Sample Call: `axios.post('/api/reservation/1')`
 ______________________________________________________
 
 **Purpose** : Update a reservation to a rental property
@@ -77,7 +77,7 @@ ______________________________________________________
 - Success Response:
   - Status: `202 OK`
   - Content: `{success: 'Successfully updated your reservation!'}`
-- Sample Call: `axios.get('/api/reservation/1/update')`
+- Sample Call: `axios.patch('/api/reservation/1/update')`
 
 ______________________________________________________
 
@@ -86,6 +86,7 @@ ______________________________________________________
 - Success Response:
   - Status: `202 OK`
   - Content: `{success: 'Successfully deleted your reservation!'}`
+- Sample Call: `axios.delete('/api/reservation/1/delete')`
 
 
 ### Installing Dependencies
