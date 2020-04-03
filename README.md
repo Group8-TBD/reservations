@@ -97,24 +97,3 @@ From within the root directory:
 npm install -g webpack
 npm install
 ```
-
-
-
-
-
-/*
-update, delete url
-get request:info of the room, /api/room/roomID
-post request
-
-POST:
-update add property. /api/room/
-on this property api/property /:id/researvation/:id
-
-update:
-property
-
-delete:
-delete room & reservation
-
-*/
