@@ -1,8 +1,8 @@
 ## MAC files ##
 .DS_Store
 
-## Database config ##
-
+## Database ##
+fakeData/
 ## NPM ##
 npm
 npm-debug.log

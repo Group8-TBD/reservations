@@ -1,7 +1,6 @@
 module.exports = {
-  host: '',
+  host: 'localhost',
   user: 'root',
   password: '',
-  database: 'reservations',
-  multipleStatements: true
+  database: 'Airbnb',
 }
