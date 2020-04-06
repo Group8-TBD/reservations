@@ -2,7 +2,7 @@
   "name": "reservations",
   "version": "1.0.0",
   "description": "a reservations module",
-  "author": "Bradley Zazzara",
+  "author": "Hui Xia",
   "license": "MIT",
   "engines": {
     "node": ">=6.13.0"
@@ -10,7 +10,7 @@
   "scripts": {
     "docker": "sleep 20 && npm run schema && npm run start",
     "schema": "node db/schema.js",
-    "seed": "node db/seed.js",
+    "seed:postgre": "node db/postgreSQL/seedReservations.js && node db/postgreSQL/seedRooms.js && node db/postgreSQL/seedUsers.js",
     "test": "jest",
     "build:dev": "webpack -d --watch",
     "build:prod": "webpack --mode=production",
