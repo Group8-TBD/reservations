@@ -1,10 +1,9 @@
 const faker = require('faker');
-const fs = require('fs');
+const path = require('path');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
-
 const csvWriter = createCsvWriter({
-  path: './fakeData/reservations.csv',
+  path: 'db/fakeData/reservations.csv',
   header:[
     {id:'id', title: 'id'},
     {id:'checkin', title: 'checkin'},
@@ -20,17 +19,18 @@ const csvWriter = createCsvWriter({
 
 let reservations = [];
 let count = 1000000;
+// let count = 10;
 
 const generateData = () => {
   for (var i = 1; i <= count; i++) {
-    const checkin = ;
-    const checkout = ;
-    const adults = faker.random.number({ min: 1, max: 15 });
+    const checkin = faker.date.between('2020-04-10', '2020-05-20').toString().slice(4, 15);
+    const checkout = faker.date.between(checkin, '2020-05-25').toString().slice(4, 15);
+    const adults = faker.random.number({ min: 1, max: 10 });
     const children = faker.random.number({ min: 0, max: 5 });
     const infants = faker.random.number({ min: 0, max: 5 });
-    const total_cost = faker.random.number({ min: 70, max: 2200 });
-    const tax = Math.random() * 300;
-    const service_charge = faker.random.number({ min: 25, max: 300 });
+    const total_cost = faker.random.number({ min: 1000, max: 900});
+    const tax = Math.floor(total_cost * 0.15);
+    const service_charge = Math.floor(total_cost * 0.18);
 
     let reservation = {
       id: i,

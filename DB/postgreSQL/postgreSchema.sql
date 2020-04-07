@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS AirBnB;
+DROP DATABASE IF EXISTS Airbnb;
 
 CREATE DATABASE Airbnb;
 
@@ -41,11 +41,8 @@ CREATE TABLE guests (
 );
 
 
-COPY reservations (id, checkin, checkout, adults, children, infants, total_cost, tax, service_charge)
+\COPY reservations (id, checkin, checkout, adults, children, infants, total_cost, tax, service_charge) FROM '/Users/hui/reservations/db/fakeData/reservations.csv' DELIMITER ',' CSV HEADER;
 
+\COPY rooms (id, room_location, price, rating, rating_count, max_guests, tax, service_fee) FROM '/Users/hui/reservations/db/fakeData/rooms.csv' DELIMITER ',' CSV HEADER;
 
-
-COPY rooms (id, room_title, price, rating, rating_count, max_guests, tax, service_fee)
-
-
-COPY guests (id, userName)
+\COPY guests (id, userName) FROM '/Users/hui/reservations/db/fakeData/users.csv' DELIMITER ',' CSV HEADER;
