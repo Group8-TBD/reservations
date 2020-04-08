@@ -2,7 +2,7 @@ const faker = require('faker');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 const csvWriter = createCsvWriter({
-  path: 'db/fakeData/rooms.csv',
+  path: 'db/fakeData/testroom50.csv',
   header:[
     {id:'id', title: 'id'},
     {id:'room_location', title: 'room_location'},
@@ -16,8 +16,8 @@ const csvWriter = createCsvWriter({
 });
 
 let rooms = [];
-let count = 1000000;
-// let count = 10;
+//let count = 1000000;
+let count = 50;
 
 const generateData = () => {
   for (var i = 1; i <= count; i++) {
