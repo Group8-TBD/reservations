@@ -10,7 +10,9 @@
   "scripts": {
     "docker": "sleep 20 && npm run schema && npm run start",
     "schema": "node db/schema.js",
-    "seed:postgre": "node db/postgreSQL/seedRooms.js",
+    "seed:postgre:reser": "node db/postgreSQL/seedReservations.js",
+    "seed:postgre:room": "node db/postgreSQL/seedRooms.js",
+    "seed:postgre:guest": "node db/postgreSQL/seedUsers.js",
     "seed:cass": "node db/cassandraDB/CassandraSeed.js",
     "test": "jest",
     "build:dev": "webpack -d --watch",
