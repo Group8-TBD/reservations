@@ -25,6 +25,12 @@ class App extends React.Component {
       checkInColor: 'white',
       checkoutColor: 'white',
       currentCheck: 'CheckIn',
+      price: 149,
+      rating: 4.5,
+      reviewCount: 2301,
+      maxGuests:2,
+      tax: 0.10,
+      fee: 0.15
     }
 
     this.calPopUp = this.calPopUp.bind(this);
@@ -34,14 +40,20 @@ class App extends React.Component {
     this.updateCheckout = this.updateCheckout.bind(this);
   }
 
+
   componentDidMount() {
+   console.log('capitl mout?')
     $.ajax({
       method: 'GET',
-      url: '/api/properties',
-      success: (property) => {
-        let prop = property[0];
+      url: '/api/reservations/:roomId',
+     // data: {response.rows[0]},
+      success: (response) => {
+        //console.log(property)
+        let prop = response.rows[0];
+        //let prop = property;
         this.setState({
-          property: prop,
+          //data
+          //property: prop,
           price: prop.price,
           rating: prop.rating,
           reviewCount: prop.ratings_count,
