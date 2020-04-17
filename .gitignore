@@ -3,10 +3,13 @@
 
 ## Database ##
 fakeData/
+
 ## NPM ##
 npm
 npm-debug.log
 node_modules/
+awscli-bundle.zip
+package-lock.json
 
 pids
 *.pid
