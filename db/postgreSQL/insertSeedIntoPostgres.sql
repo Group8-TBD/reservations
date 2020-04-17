@@ -4,3 +4,5 @@
 \COPY rooms (id, price, rating, rating_count, max_guests, tax, service_fee) FROM '/Users/hui/reservations/db/fakeData/room.csv' DELIMITER ',' CSV HEADER;
 
 \COPY guests (id, guestname) FROM '/Users/hui/reservations/db/fakeData/users.csv' DELIMITER ',' CSV HEADER;
+
+
