@@ -1,4 +1,5 @@
-CREATE DATABASE Airbnb;
+
+CREATE DATABASE airbnb;
 
 CREATE TABLE "reservations" (
   "id" serial PRIMARY KEY,

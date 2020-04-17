@@ -46,7 +46,7 @@ function writeTenMillionUsers(writer, encoding, callback) {
     do {
       i -= 1;
       id += 1;
-      let total_cost = faker.random.number({ min: 1000, max: 900});
+      let total_cost = faker.random.number({ min: 100, max: 900});
       const reservationDates = generateReservationDates();
       const checkin = reservationDates.checkIn;
       const checkout = reservationDates.checkOut;
