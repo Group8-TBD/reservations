@@ -13,8 +13,9 @@ COPY . /src/app
 # Does your app have any dependencies that should be installed?
 RUN npm install
 
+RUN apt-get update && apt-get install -y vim
 # What port will the container talk to the outside world with once created?
-EXPOSE 3000
+EXPOSE 3111
 
 # How do you start your app?
 CMD [ "npm", "run", "docker"]
