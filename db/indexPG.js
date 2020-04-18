@@ -30,3 +30,12 @@ const getReservation = (roomId) => {
 
 
 module.exports = { pool, getReservation };
+
+
+// AWS connection config
+// const pool = new Pool({
+//   user: "postgres",
+//   host: "172.31.41.174", //private ID
+//   database: "ec2airbnb",
+//   port: 5432,
+// })
