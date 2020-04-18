@@ -1,17 +1,17 @@
 const newRelic = require('newrelic');
+const compression = require('compression');
 const express = require('express');
 const bodyParser = require('body-parser');
 const Controller = require('../server/controllers/CRUD-reservation.js');
 const db = require('../db/indexPG.js');
-const morgan = require('morgan');
+//const morgan = require('morgan');
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
 // console.log(cpus); // total 8
-
 const app = express();
+app.use(compression());
 //const port = 3111;
-
-app.use(morgan('dev'))
+//app.use(morgan('dev'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
@@ -39,8 +39,6 @@ if (cluster.isMaster) {
   // All workers use this port
   app.listen(3111);
 }
-
-
 
 
 
