@@ -21,11 +21,12 @@ pool.connect((err) => {
 // create new config and server routes for k6
 
 // GET information with a given room id
-// const getReservation = (roomID) => {
-//   return pool.query(`selection * from rooms where rooms.id = ${roomID}`)
-//     .then(roomData => )
-// }
+const getReservation = (roomId) => {
+  return pool.query(`select * from rooms where rooms.id = ${roomId}`)
+    .then(data => data)
+    .catch(err => console.log(err.stack))
+}
 
 
 
-module.exports = pool;
+module.exports = { pool, getReservation };
